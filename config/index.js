@@ -27,7 +27,19 @@ module.exports = {
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/topics ': {
+          target: 'https://cnodejs.org/api/v1',
+          changeOrigin: true
+        },
+        '/topic':{
+          target: 'https://cnodejs.org/api/v1',
+          changeOrigin: true,
+          pathRewrite: {
+            '^/topic': '/topic'
+          }
+        }
+    },
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)

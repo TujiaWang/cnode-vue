@@ -3,6 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>cnode-vue</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <script>
+    var clientWidth = document.documentElement.clientWidth>640?640:document.documentElement.clientWidth;
+    document.documentElement.style.fontSize = (clientWidth*2 / 10) + 'px';
+    </script>
+    <link rel="stylesheet" type="text/css" href="./static/css/reset.css">
   </head>
   <body>
     <div id="app"></div>
