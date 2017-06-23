@@ -32,7 +32,7 @@ ul, ol { list-style: none; }
 
 /* 重置文本格式元素 */
 a { text-decoration: none; }
-a:hover { text-decoration: underline; }
+a:hover { text-decoration: none; }
 
 abbr[title], acronym[title] { /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
     border-bottom: 1px dotted;
@@ -71,4 +71,18 @@ body{
     font-family: "Helvetica Neue","Luxi Sans","DejaVu Sans",Tahoma,"Hiragino Sans GB",STHeiti,sans-serif!important;
     line-height: 20px;
     color: #333;
+}
+img{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+.pull-left{
+    float:left;
+}
+.pull-right {
+    float: right;
 }
