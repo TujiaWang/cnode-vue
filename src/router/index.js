@@ -6,6 +6,9 @@ import Share from '@/components/Share'
 import Ask from '@/components/Ask'
 import Job from '@/components/Job'
 import Dev from '@/components/Dev'
+import GetStart from '@/components/GetStart'
+import Api from '@/components/Api'
+import About from '@/components/About'
 
 Vue.use(Router)
 
@@ -38,6 +41,18 @@ export default new Router({
     {
       path:'/dev',
       component:Dev
+    },
+    {
+      path:'/getstart',
+      component:GetStart
+    },
+    {
+      path:'/api',
+      component:Api
+    },
+    {
+      path:'/about',
+      component:About
     }
   ]
 })

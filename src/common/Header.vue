@@ -7,11 +7,11 @@
             </form>
             <ul class="nav">
                 <li><a href="/">首页</a></li>
-                <li><a href="/getstart">新手入门</a></li>
-                <li><a href="/api">API</a></li>
-                <li><a href="/about">关于</a></li>
-                <li><a href="/signup">注册</a></li>
-                <li><a href="/signin">登录</a></li>
+                <li><router-link to="getstart">新手入门</router-link></li>
+                <li><router-link to="api">API</router-link></li>
+                <li><router-link to="about">关于</router-link></li>
+                <li><a href="//cnodejs.org/signup">注册</a></li>
+                <li><a href="//cnodejs.org/signin">登录</a></li>
             </ul>
         </div>
     </div>

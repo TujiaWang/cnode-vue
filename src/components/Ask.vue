@@ -1,7 +1,7 @@
 <template>
 <div class="topic_list">
     <div class="cell" v-for="(topic,index) in topics">
-      <a class="user_avatar pull-left" href="/user/i5ting">
+      <a class="user_avatar pull-left" href="javascript:;" @click="showDetail(topic.id)">
         <img :src="topic.author.avatar_url" :title="topic.author.loginname">
       </a>
 
@@ -11,14 +11,14 @@
         <span class="count_of_visits" title="点击数">{{topic.visit_count}}</span>
       </span>
 
-      <a class="last_time pull-right" href="/topic/592917b59e32cc84569a7458#594a231b325c502917ef0cb6">
+      <a class="last_time pull-right" href="javascript:;" @click="showDetail(topic.id)">
         <img class="user_small_avatar" :src="topic.author.avatar_url">
         <span class="last_active_time">{{calcTimes(topic.last_reply_at)}}</span>
       </a>
       
       <div class="topic_title_wrapper">
         <span :class="getShow(topic).className">{{getShow(topic).text}}</span>
-        <a class="topic_title" href="/topic/592917b59e32cc84569a7458" :title="topic.title">{{topic.title}}</a>
+        <a class="topic_title" href="javascript:;" @click="showDetail(topic.id)" :title="topic.title">{{topic.title}}</a>
       </div>
     </div>
 </div>
@@ -68,6 +68,10 @@ export default {
           }else{
             return days+' 天前';
           }
+      },
+      showDetail(id){
+        // console.log(id);
+        this.$emit('topicid',id);
       }
   },
   created(){
