@@ -89,3 +89,38 @@ img{
 h1,h2,h3{
     line-height: 40px;
 }
+
+
+
+
+
+.markdown-text {
+    margin: 0 10px;
+}
+
+.markdown-text p{
+    font-size: 15px;
+    line-height: 1.7em;
+    overflow: auto;
+}
+.markdown-text p a {
+    color: #08c;
+}
+
+.markdown-text ul{
+    padding: 0;
+    margin: 0 0 10px 25px;
+}
+.markdown-text ul li{
+    font-size:14px;
+    line-height:2em;
+}
+.markdown-text ul li a{
+    color:#08c;
+}
+.markdown-text hr{
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #fff;
+}

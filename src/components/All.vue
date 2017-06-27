@@ -80,7 +80,7 @@ export default {
         // console.log(res.data.data);
         _this.topics = res.data.data;
       }).then(function(err){
-          console.log(err);
+          // console.log(err);
       });
   }
 }

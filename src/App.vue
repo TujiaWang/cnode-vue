@@ -14,7 +14,7 @@
             <router-view @topicid="showDetail"></router-view>
         </div>
     </div>
-    <cn-detail :topic="topic"></cn-detail>
+    <cn-detail :topic="topic" v-if="detail"></cn-detail>
   </div>
 </template>
 
@@ -27,7 +27,8 @@ export default {
   data(){
     return {
       topic : {},
-      show:true
+      show:true,
+      detail:false
     }
   },
   components:{
@@ -37,13 +38,14 @@ export default {
   methods:{
     showDetail(id){
       this.show = false;
+      this.detail = true;
       // console.log("App"+id);
       let _this = this;
       axios.get('/topic/'+id).then(function(res){
-        console.log(res);
+        // console.log(res);
         _this.topic = res.data.data;
       }).then(function(err){
-        console.log(err);
+        // console.log(err);
       });
     }
   }
